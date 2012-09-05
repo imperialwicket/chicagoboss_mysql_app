@@ -11,7 +11,7 @@ list('POST', []) ->
     case Create of
         {ok, NewTodo} ->
             Todos = boss_db:find(my_todo, []),
-            {ok, [{todos, Todos]};
+            {ok, [{todos, Todos}]};
         {error, [ErrorMessages]} ->
             {ok, [{errors, ErrorMessages}]}
     end.
